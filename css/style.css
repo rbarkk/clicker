@@ -63,6 +63,7 @@ p {
     padding: 30px;
     font-size: 40px;
     color: #efeff1;
+    user-select: none;
 }
 
 .clicked{
