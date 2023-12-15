@@ -9,9 +9,9 @@ const BANK = {
     MONEY: document.querySelector(".money"),
     NUMBER: document.querySelector(".number-bank"),
 }
-let numberClick = Number(BUTTON.NUMBER.innerText);
+let numberClick = Number( BUTTON.NUMBER.innerText );
 let numberUpgrade = 2000;
-let numberBank = Number(BANK.NUMBER.innerText);
+let numberBank = Number( BANK.NUMBER.innerText );
 let trillion = 1000000000000;
 
 BANK.BANK.addEventListener("click", () => {
@@ -78,35 +78,35 @@ BUTTON.UPGRADE.addEventListener("click", () => {
     }
 })
 
-function viewUpgrade (numberBank, numberUpgrade) {
-    if (numberBank >= numberUpgrade){
+function viewUpgrade ( numberBank, numberUpgrade ) {
+    if ( numberBank >= numberUpgrade ){
         BUTTON.UPGRADE.style.visibility = "visible";
     } else {
         BUTTON.UPGRADE.style.visibility = "hidden";
     }
-    BUTTON.NUMBER_UPGRADE.textContent = String(numberUpgrade);
+    BUTTON.NUMBER_UPGRADE.textContent = String( numberUpgrade );
 
-    if(numberBank >= trillion) {
+    if( numberBank >= trillion ) {
         let question = "Ты заработал трилион рублей. А это значит что " +
             "ты прошел игру. Хочешь ли ты начать все заново?"
-        let result = confirm(question);
-        if (result) {
+        let result = confirm( question );
+        if ( result ) {
             BANK.NUMBER.textContent = String(prompt("Сколько хочешь денег?"));
-            numberBank = Number(BANK.NUMBER.innerText)
+            numberBank = Number( BANK.NUMBER.innerText )
         } else {
             alert("Приятной игры")
         }
     }
 }
-function Upgrade (numberClick) {
-    BUTTON.NUMBER.textContent = String(numberClick)
+function Upgrade ( numberClick ) {
+    BUTTON.NUMBER.textContent = String( numberClick )
     numberBank = Number(BANK.NUMBER.innerText)
     BUTTON.UPGRADE.style.visibility = "hidden";
 }
 function updateMoney() {
     let number = Number(prompt("Пароль верный, выбери сумму", "1000"))
-    if (number === !NaN) {
-        BANK.NUMBER.textContent = String(number)
+    if ( number === !NaN ) {
+        BANK.NUMBER.textContent = String( number )
         numberBank = Number(BANK.NUMBER.innerText)
     } else {
         alert("Аааааа надо число вводить")
