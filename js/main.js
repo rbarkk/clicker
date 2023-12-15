@@ -17,13 +17,7 @@ let trillion = 1000000000000;
 BANK.BANK.addEventListener("click", () => {
     let password = prompt("Хочешь хакнуть? скажи пароль", "1234");
     if (password === "1234"){
-        let number = Number(prompt("Пароль верный, выбери сумму", "1000"))
-        if (number === !NaN) {
-            BANK.NUMBER.textContent = String(number)
-            numberBank = Number(BANK.NUMBER.innerText)
-        } else {
-            alert("Аааааа надо число вводить")
-        }
+        updateMoney()
     } else {
         alert("Пароль неверный")
     }
@@ -108,4 +102,13 @@ function Upgrade (numberClick) {
     BUTTON.NUMBER.textContent = String(numberClick)
     numberBank = Number(BANK.NUMBER.innerText)
     BUTTON.UPGRADE.style.visibility = "hidden";
+}
+function updateMoney() {
+    let number = Number(prompt("Пароль верный, выбери сумму", "1000"))
+    if (number === !NaN) {
+        BANK.NUMBER.textContent = String(number)
+        numberBank = Number(BANK.NUMBER.innerText)
+    } else {
+        alert("Аааааа надо число вводить")
+    }
 }
