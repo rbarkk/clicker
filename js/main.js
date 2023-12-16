@@ -105,10 +105,12 @@ function Upgrade ( numberClick ) {
 }
 function updateMoney() {
     let number = Number(prompt("Пароль верный, выбери сумму", "1000"))
-    if ( number === !NaN ) {
+    console.log(number)
+    if ( Number.isInteger(number) ) {
         BANK.NUMBER.textContent = String( number )
         numberBank = Number(BANK.NUMBER.innerText)
     } else {
+        console.log(number.isInteger)
         alert("Аааааа надо число вводить")
     }
 }
