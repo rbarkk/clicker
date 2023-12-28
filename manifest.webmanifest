@@ -1,7 +1,7 @@
 {
- "name": "BRKin app",
+ "name": "bank app",
  "id": "?homescreen=1",
- "short_name": "BRKin Beta",
+ "short_name": "Bank Beta",
  "start_url": "index.html",
  "display": "fullscreen",
  "theme_color": "#000000",
